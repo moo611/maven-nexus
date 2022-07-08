@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="nexus-cma-feature">
+    <feature name="nexus-cma-feature" description="org.sonatype.nexus.assemblies:nexus-cma-feature" install="featureFlag:enabledByDefault:nexus.orient.enabled" version="3.31.1.01">
+        <details>org.sonatype.nexus.assemblies:nexus-cma-feature</details>
+        <feature version="3.31.1.01">nexus-repository-cocoapods</feature>
+        <feature version="3.31.1.01">nexus-repository-conan</feature>
+        <feature version="3.31.1.01">nexus-repository-golang</feature>
+        <feature version="3.31.1.01">nexus-repository-p2</feature>
+        <feature version="3.31.1.01">nexus-repository-r</feature>
+        <feature version="3.31.1.01">nexus-restore-maven</feature>
+        <feature version="3.31.1.01">nexus-restore-p2</feature>
+        <feature version="3.31.1.01">nexus-restore-r</feature>
+        <feature version="3.31.1.01">nexus-restore-raw</feature>
+    </feature>
+    <feature name="nexus-repository-r" description="org.sonatype.nexus.plugins:nexus-repository-r" version="3.31.1.01">
+        <details>org.sonatype.nexus.plugins:nexus-repository-r</details>
+        <feature prerequisite="true" dependency="false">wrap</feature>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-repository-r/3.31.1-01</bundle>
+        <bundle>wrap:mvn:se.sawano.java/alphanumeric-comparator/1.4.1</bundle>
+    </feature>
+    <feature name="nexus-repository-cocoapods" description="org.sonatype.nexus.plugins:nexus-repository-cocoapods" version="3.31.1.01">
+        <details>org.sonatype.nexus.plugins:nexus-repository-cocoapods</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-repository-cocoapods/3.31.1-01</bundle>
+    </feature>
+    <feature name="nexus-repository-conan" description="org.sonatype.nexus.plugins:nexus-repository-conan" version="3.31.1.01">
+        <details>org.sonatype.nexus.plugins:nexus-repository-conan</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-repository-conan/3.31.1-01</bundle>
+    </feature>
+    <feature name="nexus-repository-golang" description="org.sonatype.nexus.plugins:nexus-repository-golang" version="3.31.1.01">
+        <details>org.sonatype.nexus.plugins:nexus-repository-golang</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-repository-golang/3.31.1-01</bundle>
+        <bundle>mvn:org.apache.commons/commons-compress/1.20</bundle>
+    </feature>
+    <feature name="nexus-repository-p2" description="org.sonatype.nexus.plugins:nexus-repository-p2" version="3.31.1.01">
+        <details>org.sonatype.nexus.plugins:nexus-repository-p2</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-repository-p2/3.31.1-01</bundle>
+        <bundle>mvn:org.apache.commons/commons-compress/1.20</bundle>
+        <bundle>mvn:org.tukaani/xz/1.8</bundle>
+    </feature>
+    <feature name="nexus-restore-maven" description="org.sonatype.nexus.plugins:nexus-restore-maven" version="3.31.1.01">
+        <details>org.sonatype.nexus.plugins:nexus-restore-maven</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-restore-maven/3.31.1-01</bundle>
+    </feature>
+    <feature name="nexus-restore-p2" description="org.sonatype.nexus.plugins:nexus-restore-p2" version="3.31.1.01">
+        <details>org.sonatype.nexus.plugins:nexus-restore-p2</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-restore-p2/3.31.1-01</bundle>
+    </feature>
+    <feature name="nexus-restore-r" description="org.sonatype.nexus.plugins:nexus-restore-r" version="3.31.1.01">
+        <details>org.sonatype.nexus.plugins:nexus-restore-r</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-restore-r/3.31.1-01</bundle>
+        <bundle>mvn:org.apache.commons/commons-compress/1.20</bundle>
+    </feature>
+    <feature name="nexus-restore-raw" description="org.sonatype.nexus.plugins:nexus-restore-raw" version="3.31.1.01">
+        <details>org.sonatype.nexus.plugins:nexus-restore-raw</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-restore-raw/3.31.1-01</bundle>
+    </feature>
+</features>
